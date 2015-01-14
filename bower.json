@@ -1,0 +1,24 @@
+{
+  "name": "calk",
+  "version": "0.01",
+  "description": "calker",
+  "main": "login.php",
+  "keywords": [
+    "social",
+    "media"
+  ],
+  "authors": [
+    "PP"
+  ],
+  "license": "GPL",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "font-awesome": "~4.2.0"
+  }
+}
