@@ -3,6 +3,6 @@
 # Example .gitignore files: https://github.com/github/gitignore
 
 /assets/scss
-/assets/scss/*
 /bower_components
-/bower_components/*
+/test
+/.sass-cache

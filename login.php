@@ -3,15 +3,15 @@
 <head>
   <meta charset="UTF-8">
   <title>Welcome to CechCalk</title>
-  <link rel="stylesheet" href="/assets/css/roboto/webfonts/roboto_regular_macroman/stylesheet.css">
-  <link rel="stylesheet" href="/bower">
-  <link rel="stylesheet" href="/assets/css/normalize.css">
-  <link rel="stylesheet" href="/assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/roboto/webfonts/roboto_regular_macroman/stylesheet.css">
+  <link rel="stylesheet" href="bower_components/font-awesome/css/font-awesome.min.css">
+  <link rel="stylesheet" href="assets/css/normalize.css">
+  <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
   <div class='login-form'>
-    <ul>
-      <li><a href="#login">Login</a></li>
+    <ul class="login-tab-menu clear">
+      <li class="active"><a href="#login">Login</a></li>
       <li><a href="#register">Register</a></li>
     </ul>
     <!-- Start Login Form Here   -->
