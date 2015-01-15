@@ -16,6 +16,7 @@ label {
   display: block; }
 
 input[type='text'],
+input[type='email'],
 input[type='password'] {
   width: 100%;
   padding: .3em;
@@ -41,7 +42,7 @@ input[type='password'] {
         text-align: center; }
       .login-form .login-tab-menu > li.active {
         background-color: #fff; }
-  .login-form #login {
+  .login-form .tab-target {
     padding: 20px; }
   .login-form #register {
     display: none; }
