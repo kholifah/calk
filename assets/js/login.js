@@ -6,7 +6,7 @@ function tabHandler(object){
   var active = ulParent.querySelector('li.active');
   
   active.className = "";
-  parent.addClass("active");
+  parent.className= "active";
   
   var tabTarget = document.querySelectorAll('.tab-target');
   
