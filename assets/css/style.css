@@ -46,5 +46,9 @@ input[type='password'] {
     padding: 20px; }
   .login-form #register {
     display: none; }
+    .login-form #register .notification {
+      background-color: #ff2a2a;
+      padding: 10px;
+      color: #fff; }
 
 /*# sourceMappingURL=style.css.map */

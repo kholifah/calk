@@ -1,5 +1,10 @@
 <?php
   class Validation{
+    /**
+     * Fungsi untuk validasi username
+     * @param  string  $string string yang di inputkan sebagai username
+     * @return boolean return true ketika lolos validasi return false ketika gagal validasi 
+     */
     function validate_username($string){
       // Validation Rule 
       // 1. it's not null => required
@@ -19,7 +24,37 @@
       if(strlen($string)<6 or strlen($string)>20){
         return false;
       }
+       
+      return true;
+    }
+    
+    /**
+     * [[Description]]
+     * @param  [[Type]] $string [[Description]]
+     * @return boolean  [[Description]]
+     */
+    function validate_email($string){
+      if($string=="" or $string === NULL){
+        return false;
+      }
       
+      if(!filter_var($string,FILTER_VALIDATE_EMAIL)){
+        return false;
+      }
+      
+      return true;
+    }
+    
+    function validate_password($string){
+      if($string=="" or $string === NULL){
+        return false;
+      }
+      if(strlen($string)<6){
+        return false;
+      }
+      if(!preg_match("/^[A-Z]/",$string)){
+        return false;
+      }
       return true;
     }
   }

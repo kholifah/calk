@@ -33,6 +33,15 @@
     
     <!-- Start Register Form Here   -->
     <div id="register" class="tab-target">
+      <?php
+        if(isset($_GET['msg'])){
+      ?>
+        <p class="notification">
+          <?php echo $_GET['msg']; ?>
+        </p>
+      <?php
+        }
+      ?>
       <form action="userRegistration.php" method="post">
         <label>
           <input type="text" name='username' placeholder="Username">
@@ -50,5 +59,10 @@
       </form>
     </div>
   </div>
+  <script>
+    var tab = window.location.href.split('#');
+    var trigger = document.querySelector(".login-tab-menu li a[href='#"+tab[1]+"']");
+    tabHandler(trigger);
+  </script>
 </body>
 </html>
