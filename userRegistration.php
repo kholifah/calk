@@ -12,7 +12,7 @@
     ){
     echo "Semua Data Valid";
   }else{
-    header("location:login.php?msg=Ada Data yang Gak Valid Bro#register");
+    header("location:login.php?reg=Ada Data yang Gak Valid Bro#register");
   }
 
   

@@ -57,5 +57,20 @@
       }
       return true;
     }
+    
+    function validate_is_not_null($string){
+      if(trim($string)=="" or $string === NULL){
+        return false;
+      }
+      return true;
+    }
+    
+    function validate_password_is_not_null($string){
+      if($string=="" or $string === NULL){
+        return false;
+      }
+      return true;
+    }
+    
   }
 ?>
