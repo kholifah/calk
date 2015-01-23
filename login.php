@@ -1,3 +1,9 @@
+<?php
+  session_start();
+  if(isset($_SESSION['is_login']) && $_SESSION['is_login'] === true){
+    header("location:users/dashboard.php");
+  }else{
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -75,3 +81,6 @@
   </script>
 </body>
 </html>
+<?php
+  }
+?>
