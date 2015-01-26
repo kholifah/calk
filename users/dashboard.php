@@ -13,17 +13,25 @@
 </head>
 <body>
   <div class="header-bg clear">
-    <i class="fa fa-align-left"></i>
+    <a href="#menu" class='hamburger' onclick="toggleMenu('.main-nav')" title="Menu"><i class="fa fa-align-left"></i></a>
     <i class="fa fa-search"></i>
+    <a href="#new" class='new-tweet' onclick="newTweet(this)" title="New cuih here"><i class="fa fa-plus"></i></a>
     <h1>Dashboard</h1>
+  </div>
+  <div class="new-tweet-form">
+   <div>
+    <textarea name="tweet" onkeyup="calculateRemaining('.counter .value',event,this)" id="tweet" required placeholder='New cuih here...'></textarea>
+    <div class="counter"><span class="value">140</span> Remaining</div>
+    <input type="button" class='button default' value='Cuih'>
+   </div>
   </div>
   <div class="main-nav">
     <nav>
       <ul>
-        <li>Tweets</li>
-        <li>Following</li>
-        <li>Followers</li>
-        <li>Trends</li>
+        <li><a href="">Tweets</a></li>
+        <li><a href="">Following</a></li>
+        <li><a href="">Followers</a></li>
+        <li><a href="">Trends</a></li>
       </ul>
     </nav>
   </div>
@@ -128,6 +136,7 @@
       </ul>
     </div>
   </div>
+  <script src="../assets/js/function.js"></script>
 </body>
 </html>
 <?php

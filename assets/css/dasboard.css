@@ -4,16 +4,19 @@
   -moz-box-sizing: border-box;
   box-sizing: border-box; }
 
-.clear, .content .tweets ul li .post-meta {
+body {
+  font-size: 0.875em; }
+
+.clear, .new-tweet-form, .content .tweets ul li .post-meta {
   clear: both; }
 
-.left, .header-bg i.fa-align-left, .header-bg h1, .content .tweets ul li .post-meta .avatar, .content .tweets ul li .post-meta .name {
+.left, .header-bg .hamburger, .header-bg h1, .new-tweet-form .counter, .content .tweets ul li .post-meta .avatar, .content .tweets ul li .post-meta .name {
   float: left; }
 
-.right, .header-bg i.fa-search {
+.right, .header-bg i.fa-search, .header-bg .new-tweet, .new-tweet-form .button.default {
   float: right; }
 
-.clear:after, .content .tweets ul li .post-meta:after {
+.clear:after, .new-tweet-form:after, .content .tweets ul li .post-meta:after {
   clear: both;
   content: '';
   display: block; }
@@ -33,12 +36,13 @@ input[type='password'] {
   background-color: #2793ff; }
   .header-bg i.fa {
     line-height: 3em; }
-  .header-bg i.fa-align-left {
+  .header-bg .hamburger {
     margin-left: 1em;
     color: #fff; }
-  .header-bg i.fa-search {
+  .header-bg i.fa-search, .header-bg .new-tweet {
     margin-right: 1em;
-    color: #fff; }
+    color: #fff;
+    cursor: pointer; }
   .header-bg h1 {
     margin: 0;
     font-size: 1.5em;
@@ -46,8 +50,62 @@ input[type='password'] {
     margin-left: 1em;
     color: #fff; }
 
-.main-nav nav {
-  display: none; }
+.new-tweet-form {
+  border-bottom: 1px solid #f2f2f2;
+  margin: 0;
+  display: none;
+  height: 0;
+  transition: height 0.5s ease;
+  overflow: hidden; }
+  .new-tweet-form > div {
+    padding: 1em; }
+  .new-tweet-form #tweet {
+    display: block;
+    width: 100%;
+    height: 5em;
+    border: 1px solid #ccc;
+    color: #999;
+    padding: 5px; }
+    .new-tweet-form #tweet:focus {
+      border: 1px solid #2793ff;
+      color: #222; }
+  .new-tweet-form .button.default {
+    background-color: #2793ff;
+    color: #fff;
+    border: 0;
+    margin-top: 0.5em;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    -ms-border-radius: 3px;
+    -o-border-radius: 3px;
+    border-radius: 3px;
+    padding: 3px 16px; }
+  .new-tweet-form .counter {
+    margin-top: 0.5em;
+    color: #999; }
+
+.main-nav {
+  background-color: #fff;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  left: -100%;
+  top: 3em;
+  z-index: 1;
+  transition: left 0.5s ease; }
+  .main-nav nav ul {
+    margin: 0;
+    padding: 1em; }
+    .main-nav nav ul li {
+      list-style: none;
+      line-height: 2em;
+      margin-bottom: 5px; }
+      .main-nav nav ul li a {
+        color: #222;
+        text-decoration: none;
+        display: block; }
+        .main-nav nav ul li a:hover {
+          color: #2793ff; }
 
 .content {
   background-color: #f2f2f2; }
