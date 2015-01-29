@@ -20,9 +20,11 @@
   </div>
   <div class="new-tweet-form">
    <div>
-    <textarea name="tweet" onkeyup="calculateRemaining('.counter .value',event,this)" id="tweet" required placeholder='New cuih here...'></textarea>
-    <div class="counter"><span class="value">140</span> Remaining</div>
-    <input type="button" class='button default' value='Cuih'>
+     <form>
+      <textarea name="tweet" onkeyup="calculateRemaining('.counter .value',event,this)" id="tweet" required placeholder='New cuih here...'></textarea>
+      <div class="counter"><span class="value">140</span> Remaining</div>
+      <input type="button" class='button default' onclick="createCuih(this.parentNode)" value='Cuih'>
+     </form>
    </div>
   </div>
   <div class="main-nav">

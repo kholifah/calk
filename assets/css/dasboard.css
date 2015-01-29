@@ -146,7 +146,9 @@ input[type='password'] {
             color: #666;
             text-decoration: none;
             font-style: italic;
-            font-weight: 300; }
+            font-weight: 300;
+            margin-top: 0.5em;
+            display: block; }
         .content .tweets ul li .post-content {
           margin-top: 1em; }
 
